@@ -1,0 +1,21 @@
+.app {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 16px 64px;
+}
+
+.app__title {
+    margin-bottom: 8px;
+    font-size: 32px;
+    line-height: 1.2;
+    text-align: center;
+    color: #101828;
+}
+
+.app__subtitle {
+    margin-bottom: 8px;
+    text-align: center;
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.5;
+}

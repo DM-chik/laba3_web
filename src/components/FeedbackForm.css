@@ -1,0 +1,177 @@
+/* --- Каркас формы --- */
+.feedback-form {
+    max-width: 520px;
+    margin: 40px auto;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.1);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    text-align: left;
+}
+
+/* --- Поле --- */
+.field {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field__label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.field__optional {
+    font-weight: 400;
+    color: #8a94a6;
+}
+
+/* --- Базовое состояние инпута (покой) --- */
+.field__input {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 15px;
+    font-family: inherit;
+    border: 2px solid #d0d5dd;
+    border-radius: 8px;
+    background: #f9fafb;
+    color: #1d2939;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+/* --- Состояние фокуса --- */
+.field__input:focus {
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* --- Состояние ошибки --- */
+.field__input--error {
+    border-color: #e5484d;
+    background: #fef2f2;
+}
+
+.field__input--error:focus {
+    border-color: #e5484d;
+    box-shadow: 0 0 0 3px rgba(229, 72, 77, 0.15);
+}
+
+/* --- Состояние успеха --- */
+.field__input--valid {
+    border-color: #30a46c;
+    background: #f0fdf4;
+}
+
+.field__input--valid:focus {
+    border-color: #30a46c;
+    box-shadow: 0 0 0 3px rgba(48, 164, 108, 0.15);
+}
+
+/* --- Текст ошибки --- */
+.field__error {
+    font-size: 13px;
+    color: #e5484d;
+    margin-top: 2px;
+}
+
+/* --- Textarea и счётчик --- */
+.field__input--textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.field__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 18px;
+}
+
+.field__counter {
+    margin-left: auto;
+    font-size: 12px;
+    color: #8a94a6;
+    font-variant-numeric: tabular-nums;
+}
+
+.field__counter--limit {
+    color: #e5484d;
+    font-weight: 600;
+}
+
+/* --- Чекбокс --- */
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #344054;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox input {
+    width: 16px;
+    height: 16px;
+    accent-color: #2563eb;
+    cursor: pointer;
+}
+
+/* --- Кнопка отправки --- */
+.feedback-form__submit {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.feedback-form__submit:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+.feedback-form__submit:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* --- Экран успеха --- */
+.feedback-form--success {
+    text-align: center;
+}
+
+.feedback-form__icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 16px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #16a34a;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.feedback-form__title {
+    font-size: 22px;
+    margin: 0 0 8px;
+}
+
+.feedback-form__text {
+    font-size: 15px;
+    color: #667085;
+    margin-bottom: 24px;
+}
